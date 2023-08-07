@@ -1,0 +1,15 @@
+package io.redeasy.samples;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Customer customer1 =  new Customer(100L, "Juan","Gonzales",8);
+		Customer customer2 =  new Customer(200L, "Pedro","Gutierres",5);
+		
+		Predicate<Customer> 
+
+	}
+
+}

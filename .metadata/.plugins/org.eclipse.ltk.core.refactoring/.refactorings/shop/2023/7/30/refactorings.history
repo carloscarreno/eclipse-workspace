@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;io.redeasy.shopcar.resource.CarResource&apos; to &apos;ShopResource&apos;&#x0D;&#x0A;- Original project: &apos;shop&apos;&#x0D;&#x0A;- Original element: &apos;io.redeasy.shopcar.resource.CarResource&apos;&#x0D;&#x0A;- Renamed element: &apos;io.redeasy.shopcar.resource.ShopResource&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CarResource&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;io.redeasy.shopcar.resource{CarResource.java[CarResource" matchStrategy="1" name="ShopResource" qualified="false" references="true" similarDeclarations="false" stamp="1690636887311" textual="false" version="1.0"/>
+</session>

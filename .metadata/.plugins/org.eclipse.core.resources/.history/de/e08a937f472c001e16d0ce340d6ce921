@@ -1,0 +1,14 @@
+package io.redeasy.monster;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+
+@Path("/")
+public class ConfigResource {
+
+	@GET
+	public String getConfigInject() {
+		return message;
+	}
+	
+}

@@ -1,0 +1,23 @@
+package io.redeasy.monster;
+
+import java.util.List;
+
+import io.redeasy.monster.model.Car;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+
+@Path("/cars")
+public class CarResource {
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAll() {
+    	List<Car> cars = Car.listAll();
+    	return Response.ok(cars).build();
+    }
+    
+    
+}

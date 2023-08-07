@@ -1,0 +1,21 @@
+package io.redeasy.monster.model;
+
+public class Car {
+	private Long id;
+
+	private String model;
+
+	private String bodyType;
+
+	private String brand;
+
+	private String year;
+
+	private Double price;
+
+	private int seats;
+
+	private int doors;
+
+	private String urlImage;
+}

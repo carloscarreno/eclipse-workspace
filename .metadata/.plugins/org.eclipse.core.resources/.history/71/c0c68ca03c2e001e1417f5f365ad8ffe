@@ -1,0 +1,10 @@
+quarkus.datasource.jdbc.url=jdbc:postgresql://192.168.56.135:5432/monsterdb
+quarkus.datasource.username=monster
+quarkus.datasource.password=password
+quarkus.datasource.db-kind=postgresql
+quarkus.hibernate-orm.database.generation=update
+
+quarkus.http.port=8180
+
+io.redeasy.shopcar.proxy.CarProxy/mp-rest/uri=http://localhost:8080/
+io.redeasy.shopcar.proxy.CarProxy/mp-rest/scope=javax.inject.Singleton

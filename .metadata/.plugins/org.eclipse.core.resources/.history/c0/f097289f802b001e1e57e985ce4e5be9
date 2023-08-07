@@ -1,0 +1,30 @@
+package io.redeasy.monster.model;
+
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+
+@Entity
+public class Car extends PanacheEntity{
+	    
+	@Column(length=16)
+	private String model;
+    
+	@Column(length=16)
+	private String bodyType;
+
+	@Column(length=16)
+	public String brand;
+
+	@Column(length=4)
+	private String year;
+
+	private Double price;
+
+	private int seats;
+
+	private int doors;
+    
+	@Column(length=128)
+	private String urlImage;
+}

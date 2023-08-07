@@ -1,0 +1,5 @@
+quarkus.datasource.jdbc.url=jdbc:postgresql://192.168.56.135:5432/monsterdb
+quarkus.datasource.username=monster
+quarkus.datasource.password=password
+quarkus.datasource.db-kind=postgresql
+quarkus.hibernate-orm.database.generation=drop-and-create

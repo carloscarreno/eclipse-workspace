@@ -1,0 +1,14 @@
+package io.redeasy.monster.health;
+
+import org.eclipse.microprofile.health.HealthCheck;
+import org.eclipse.microprofile.health.HealthCheckResponse;
+
+public class TestHealth implements HealthCheck {
+
+	@Override
+	public HealthCheckResponse call() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

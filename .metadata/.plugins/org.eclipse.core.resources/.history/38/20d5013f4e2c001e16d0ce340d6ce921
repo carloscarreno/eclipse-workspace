@@ -1,0 +1,43 @@
+package io.redeasy.monster;
+
+import org.eclipse.microprofile.config.ConfigProvider;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+
+import jakarta.inject.Inject;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+
+@Path("/config")
+public class ConfigResource {
+
+	@Inject
+	@ConfigProperty(name = "config.message.inject", defaultValue = "Red Hat Quarkus")
+	String message;
+	
+//	@Inject
+//	CustomConfig customConfig;
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getConfigInject() {
+		return message;
+	}
+	
+	@GET
+	@Path("/provider")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getMessageByConfigProvider() {
+		return ConfigProvider.getConfig()
+				.getOptionalValue("config.message.provider", String.class)
+				.orElse("Red Hat Solution Provider");
+	}
+	
+	@GET
+	@Path("/vendor")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getCustomConfig() {
+		return customConfig.vendorName +","+ customConfig.vendorCountry;
+	}
+}
