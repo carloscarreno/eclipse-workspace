@@ -48,9 +48,11 @@ public class ShopResource {
    @GET
    @Produces(MediaType.APPLICATION_JSON)
    @Path("{id}")
-   @Gauge(name = "gauge.shop.id",
-          description = "Veces que se ha invocado el metodo de busqueda por {id}",
-          unit = MetricUnits.NONE)
+   @Gauge(name = "gauge.shop.id",description = "Veces que se ha invocado el metodo de busqueda por {id}",unit = MetricUnits.NONE)
+   @Counted(name="count.shop.id",
+           description = "Numero de busquedas por id")
+   @Timed(name = "timed.shop.id",
+           description = "Tiempo de respuesta de busqueda por id")
    public Response getById(@PathParam("id") Long id) {
 	   Shop shop = shopRepository.findById(id);
 	   if(shopRepository.isPersistent(shop)) {
@@ -85,15 +87,12 @@ public class ShopResource {
    @GET
    @Path("{id}/cars")
    @Produces(MediaType.APPLICATION_JSON)
-   @CacheResult(cacheName = "cars-cache")
-   @Counted(name = "count.shop.cars",
-            description = "Cuenta el numero de veces que se invoca a /{id}/cars")
+   @Counted(name = "count.shop.cars", 
+     description = "Contador del numero de veces que se ha invocado a /{id}/cars")
    @Timed(name = "timed.shop.cars",
-          description = "Tiempo de respuesta de la invocacion a /{id}/cars",
-          unit = MetricUnits.MILLISECONDS)
-   @Metered(name = "metered.shop.cars",
-            description = "Mide el throughput del metodo ")  
-   public Response getCars(@PathParam("id") Long id) {
+     description = "Tiempo de respuesta de la invocacion a /{id}/cars ",
+     unit = MetricUnits.MILLISECONDS)
+    public Response getCars(@PathParam("id") Long id) {
 	   List<Car> cars = carProxy.getCarsByShopId(id);
 	   return  Response.ok(cars).build();
    }

@@ -1,9 +1,0 @@
-package io.redeasy.samples;
-
-public class MethodReference {
-
-	public Double congratulationMessage(int i, int  j){
-		return  i*.4 + j*.6; 
-	}
-	
-}

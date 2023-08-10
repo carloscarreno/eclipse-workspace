@@ -1,6 +1,0 @@
-package io.redeasy.samples;
-
-@FunctionalInterface
-public interface CustomerRatingInterface<T,U,P> {
-   public P getRating(T t,U u);
-}

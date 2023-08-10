@@ -1,6 +1,0 @@
-package io.redeasy.shopcar.proxy;
-
-@RegisterRestClient
-public interface CarProxy {
-
-}

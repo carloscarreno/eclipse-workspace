@@ -2,6 +2,7 @@ package io.redeasy.shopcar.proxy;
 import java.util.List;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import io.redeasy.shopcar.entity.Car;
+import io.smallrye.common.annotation.Blocking;
 import io.smallrye.mutiny.Uni;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -21,6 +22,7 @@ public interface CarProxy {
 	Uni<List<Car>> getCarsByShopIdReactive(@PathParam("idshop") Long idShop);
 	
 	@GET
-	@Path("shop/{idshop}")
+	@Path("shop/{idshop}/reactive")
 	List<Car> getCarsByShopId(@PathParam("idshop") Long idShop);
+	
 }

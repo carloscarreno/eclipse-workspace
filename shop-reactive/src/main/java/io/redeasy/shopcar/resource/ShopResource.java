@@ -88,7 +88,7 @@ public class ShopResource {
    
    @GET
    @Path("{id}/cars")
-   @Blocking
+   //@Blocking
    @Produces(MediaType.APPLICATION_JSON)
    public Response getCars(@PathParam("id") Long id) {
 	   System.out.println("start process");

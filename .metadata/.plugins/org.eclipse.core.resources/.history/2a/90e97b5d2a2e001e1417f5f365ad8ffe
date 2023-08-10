@@ -1,5 +1,0 @@
-package io.redeasy.shopcar.proxy;
-
-public interface CarProxy {
-
-}

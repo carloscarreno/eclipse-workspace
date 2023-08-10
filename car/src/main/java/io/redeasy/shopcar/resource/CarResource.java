@@ -7,6 +7,8 @@ import io.redeasy.shopcar.entity.Car;
 import io.redeasy.shopcar.entity.Shop;
 import io.redeasy.shopcar.repository.CarRepository;
 import io.redeasy.shopcar.repository.ShopRepository;
+import io.smallrye.common.annotation.Blocking;
+import io.smallrye.mutiny.Uni;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.Consumes;
@@ -106,11 +108,19 @@ public class CarResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("shop/{idshop}")
 	public Response getCarsByShopId(@PathParam("idshop") Long idShop) {
-		delay(10000L);
 		List<Car> cars = carRepository.list("SELECT c FROM Car  c WHERE c.shop.id = ?1 ORDER BY id DESC", idShop);
 		return Response.ok(cars).build();
 	}
 
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("shop/{idshop}/reactive")
+	public Uni<Response> getCarsByShopIdReactive(@PathParam("idshop") Long idShop) {
+		delay(5000L);
+		List<Car> cars = carRepository.list("SELECT c FROM Car  c WHERE c.shop.id = ?1 ORDER BY id DESC", idShop);
+		return Uni.createFrom().item(Response.ok(cars).build());
+	}
+	
 	public void delay(Long interval) {
 		try {
 			Thread.sleep(interval);

@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="io.quarkus.hibernate.orm.panache.PanacheEntity"/>
-    <fullyQualifiedTypeName name="io.redeasy.monster.model.Car"/>
-    <fullyQualifiedTypeName name="org.eclipse.microprofile.config.ConfigProvider"/>
-    <fullyQualifiedTypeName name="org.eclipse.microprofile.config.inject.ConfigProperties"/>
-    <fullyQualifiedTypeName name="io.quarkus.arc.ArcInitConfig"/>
-    <fullyQualifiedTypeName name="org.eclipse.microprofile.health.Liveness"/>
-    <fullyQualifiedTypeName name="org.eclipse.microprofile.health.Readiness"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
@@ -58,6 +50,14 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.stream.Stream"/>
     <fullyQualifiedTypeName name="fj.data.Collectors"/>
-    <fullyQualifiedTypeName name="io.smallrye.common.annotation.Blocking"/>
+    <fullyQualifiedTypeName name="io.quarkus.cache.CacheResult"/>
+    <fullyQualifiedTypeName name="io.quarkus.cache.CacheInvalidateAll"/>
+    <fullyQualifiedTypeName name="org.eclipse.microprofile.metrics.annotation.Timed"/>
+    <fullyQualifiedTypeName name="io.jaegertracing.internal.metrics.Metric"/>
+    <fullyQualifiedTypeName name="org.eclipse.microprofile.metrics.annotation.Metered"/>
+    <fullyQualifiedTypeName name="org.eclipse.microprofile.metrics.annotation.Gauge"/>
     <fullyQualifiedTypeName name="io.smallrye.mutiny.Uni"/>
+    <fullyQualifiedTypeName name="io.smallrye.common.annotation.Blocking"/>
+    <fullyQualifiedTypeName name="org.eclipse.microprofile.metrics.MetricUnits"/>
+    <fullyQualifiedTypeName name="org.eclipse.microprofile.metrics.annotation.Counted"/>
 </qualifiedTypeNameHistroy>
