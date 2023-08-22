@@ -1,0 +1,19 @@
+quarkus.datasource.jdbc.url=jdbc:postgresql://192.168.56.135:5432/monsterdb
+quarkus.datasource.username=monster
+quarkus.datasource.password=password
+quarkus.datasource.db-kind=postgresql
+quarkus.hibernate-orm.database.generation=drop-and-create
+
+quarkus.http.port=8080
+quarkus.http.host=192.168.56.1
+
+quarkus.http.cors=true
+quarkus.http.cors.origins=*
+quarkus.http.cors.methods=GEST, POST, PUT, DELETE
+quarkus.http.cors.exposed-headers=Content-Disposition
+quarkus.http.cors.access-control-max-age=24H
+quarkus.http.cors.access-control-allow-credentials=true
+
+consul.host=192.168.56.135
+consul.port=8500
+
